@@ -1,0 +1,166 @@
+{
+  "usuarios": [
+    {
+      "id": "admin-id",
+      "login": "admin",
+      "senha": "123",
+      "nome": "Administrador",
+      "email": "admin@abc.com"
+    },
+    {
+      "id": "user-id",
+      "login": "user",
+      "senha": "123",
+      "nome": "Usuário",
+      "email": "user@abc.com"
+    },
+    {
+      "id": "nCCH8Pz4Wbk",
+      "login": "Rafa",
+      "senha": "1234",
+      "nome": "Rafael",
+      "email": "Rafa@gmail.com"
+    }
+  ],
+  "locais": [
+    {
+      "id": "1",
+      "name": "Reino de Hyrule",
+      "universe": "The Legend of Zelda",
+      "category": "Fantasia",
+      "img": "IMG/hyrule.png",
+      "description": "Hyrule é um reino mágico situado em um vasto planalto cercado por montanhas imponentes e florestas ancestrais. Lar da Princesa Zelda e palco eterno da batalha entre a luz e as trevas, o reino guarda a lendária Tríforce — artefato que concede qualquer desejo ao seu portador.",
+      "attractions": [
+        "Castelo de Hyrule — sede do poder real",
+        "Montanha da Morte — vulcão habitado por Gorons",
+        "Lago Hylia — espelho dos céus",
+        "Floresta Kokiri — lar das crianças eternas",
+        "Templo do Tempo — portal entre eras"
+      ],
+      "how": "Acesse pelo Portal do Ocarina, entoando a Canção do Tempo. Recomenda-se levar escudo e espada. Cuidado com os Moblins nas estradas.",
+      "facts": {
+        "Universo": "The Legend of Zelda",
+        "Criador": "Shigeru Miyamoto",
+        "Ano": "1986",
+        "Clima": "Temperado variado",
+        "Idioma": "Hyliano",
+        "Moeda": "Rúpias"
+      }
+    },
+    {
+      "id": "2",
+      "name": "Casa na Árvore",
+      "universe": "Adventure Time",
+      "category": "Fantasia",
+      "img": "IMG/casaNaArvore.jpg",
+      "description": "A incrível Casa na Árvore de Finn e Jake fica no coração da Terra de Ooo. Construída dentro de uma gigantesca árvore viva, a casa tem cômodos que parecem impossíveis por fora mas enormes por dentro — especialmente graças às habilidades de transformação de Jake.",
+      "attractions": [
+        "Quarto de Finn — coleção de espadas e mapas",
+        "Depósito de Jake — cheio de surpresas",
+        "Telhado panorâmico — vista para o Candy Kingdom",
+        "BMO Station — jogos e aventuras digitais"
+      ],
+      "how": "Localize-se no mapa de Ooo e siga em direção ao norte do Candy Kingdom. BMO pode te guiar pelo caminho.",
+      "facts": {
+        "Universo": "Adventure Time",
+        "Criador": "Pendleton Ward",
+        "Ano": "2010",
+        "Clima": "Ensolarado mágico",
+        "Idioma": "Inglês moderno",
+        "Moeda": "Gemas"
+      }
+    },
+    {
+      "id": "3",
+      "name": "Egghead — Ilha do Ovo",
+      "universe": "One Piece",
+      "category": "Ficção Científica",
+      "img": "IMG/EggHead.png",
+      "description": "Egghead é a ilha-laboratório do Dr. Vegapunk, o maior cientista do mundo de One Piece. Localizada no Novo Mundo, a ilha flutua sobre uma base esférica coberta de gelo e abriga tecnologia 500 anos à frente do seu tempo.",
+      "attractions": [
+        "Laboratório Vegapunk — maravilhas científicas",
+        "Punk Records — biblioteca do conhecimento mundial",
+        "Robô Gigante — guardião da ilha",
+        "Área de Satélites — seis versões de Vegapunk"
+      ],
+      "how": "Navegue pelo Novo Mundo com um Log Pose calibrado. A ilha tem defesas automáticas — recomenda-se amizade prévia com Vegapunk.",
+      "facts": {
+        "Universo": "One Piece",
+        "Criador": "Eiichiro Oda",
+        "Ano": "1997",
+        "Clima": "Ártico (base) / Temperado (topo)",
+        "Idioma": "Inglês do Velho Mundo",
+        "Moeda": "Berry (฿)"
+      }
+    },
+    {
+      "id": "4",
+      "name": "Fenda do Biquíni",
+      "universe": "Bob Esponja",
+      "category": "Aventura Aquática",
+      "img": "IMG/FendaDoBikini.png",
+      "description": "A Fenda do Biquíni é a cidade subaquática mais famosa do Oceano Pacífico. Localizada sob uma rocha em forma de âncora no fundo do mar, abriga personagens icônicos e uma vida comunitária vibrante.",
+      "attractions": [
+        "Siri Cascudo — o restaurante mais famoso do fundo do mar",
+        "Casa de Bob Esponja — abacaxi icônico",
+        "Mercearia de Larry — compras subaquáticas",
+        "Dilmundo — parque de diversões submarino"
+      ],
+      "how": "Mergulhe no Oceano Pacífico e procure a placa 'Fenda do Biquíni — 3 milhas'. Lembre-se: é possível respirar lá embaixo sem explicação científica.",
+      "facts": {
+        "Universo": "Bob Esponja",
+        "Criador": "Stephen Hillenburg",
+        "Ano": "1999",
+        "Clima": "Submarino constante",
+        "Idioma": "Inglês borbulhante",
+        "Moeda": "Dólares submarinos"
+      }
+    },
+    {
+      "id": "5",
+      "name": "Springfield",
+      "universe": "Os Simpsons",
+      "category": "Comédia",
+      "img": "IMG/springfield.jfif",
+      "description": "Springfield é uma cidade americana de tamanho médio, localizada em um estado pós-modernamente indefinido. Lar dos Simpsons, a cidade conta com uma usina nuclear questionável, um bar sempre aberto e uma comunidade que mistura o ordinário com o completamente absurdo.",
+      "attractions": [
+        "Moe's Tavern — drinques duvidosos, companhia garantida",
+        "Usina Nuclear de Springfield — turismo de risco",
+        "Kwik-E-Mart — conveniência 24h com Apu",
+        "Escola Primária — caos educacional com o Bart"
+      ],
+      "how": "Pegue a Estrada Interestadual para o 'estado sem nome'. GPS não funciona por razões roteirizadas. Pergunte por Ned Flanders — ele ajuda.",
+      "facts": {
+        "Universo": "Os Simpsons",
+        "Criador": "Matt Groening",
+        "Ano": "1989",
+        "Clima": "Americano genérico",
+        "Idioma": "Inglês americano",
+        "Moeda": "Dólar americano"
+      }
+    },
+    {
+      "id": "6",
+      "name": "Torre dos titans",
+      "universe": "One Piece",
+      "category": "Ficção Científica",
+      "img": "IMG/TitansTower.jfif",
+      "description": "A icônica torre em formato de T, do universo da liga da justiça",
+      "attractions": [
+        "Fica em uma ilha de frente para Jump City",
+        "Sala de comando",
+        "quartos do titans"
+      ],
+      "how": "Ilha protegido, é necessário uma Tag de titã para acessar livremente",
+      "facts": {
+        "Universo": "Liga da justiça",
+        "Criador": "Wanner Bros",
+        "Ano": "2003",
+        "Clima": "Temperado",
+        "Idioma": "Inglês",
+        "Moeda": "Dolar"
+      }
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

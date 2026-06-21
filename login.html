@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pontos Turísticos — Login</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <style>
+    :root {
+      --clr-dark:    #1a1a2e;
+      --clr-mid:     #2d2d44;
+      --clr-panel:   #252538;
+      --clr-accent:  #c9a84c;
+      --clr-accent2: #e8c97a;
+      --clr-text:    #e8e6df;
+      --clr-muted:   #9a9890;
+      --clr-light:   #f5f0e8;
+      --font-display: 'Cinzel', serif;
+      --font-body:    'Lato', sans-serif;
+      --radius:       6px;
+      --transition:   0.3s ease;
+    }
+
+    body {
+      background-color: var(--clr-dark);
+      color: var(--clr-text);
+      font-family: var(--font-body);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .login-container {
+      width: 100%;
+      max-width: 450px;
+      background: var(--clr-panel);
+      border: 1px solid rgba(201, 168, 76, 0.25);
+      border-radius: var(--radius);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+      padding: 40px 30px;
+    }
+
+    .brand-title {
+      font-family: var(--font-display);
+      color: var(--clr-light);
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-align: center;
+      margin-bottom: 5px;
+    }
+
+    .brand-subtitle {
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--clr-accent);
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .form-label {
+      color: var(--clr-accent);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .form-control {
+      background: var(--clr-dark);
+      border: 1px solid rgba(201, 168, 76, 0.2);
+      color: var(--clr-text);
+      border-radius: var(--radius);
+      padding: 10px 14px;
+      transition: border-color var(--transition), box-shadow var(--transition);
+    }
+
+    .form-control:focus {
+      background: var(--clr-dark);
+      border-color: var(--clr-accent);
+      color: var(--clr-text);
+      box-shadow: 0 0 8px rgba(201, 168, 76, 0.15);
+    }
+
+    .btn-accent {
+      background-color: var(--clr-accent);
+      color: var(--clr-dark);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      border: none;
+      padding: 10px 20px;
+      transition: background-color var(--transition);
+    }
+
+    .btn-accent:hover {
+      background-color: var(--clr-accent2);
+      color: var(--clr-dark);
+    }
+
+    .btn-outline-accent {
+      border: 1px solid rgba(201, 168, 76, 0.5);
+      color: var(--clr-accent);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 10px 20px;
+      transition: background-color var(--transition), color var(--transition);
+    }
+
+    .btn-outline-accent:hover {
+      background-color: rgba(201, 168, 76, 0.12);
+      color: var(--clr-accent2);
+      border-color: var(--clr-accent);
+    }
+
+    .modal-content {
+      background-color: var(--clr-panel);
+      border: 1px solid rgba(201, 168, 76, 0.3);
+      color: var(--clr-text);
+    }
+
+    .modal-header {
+      border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+    }
+
+    .modal-title {
+      font-family: var(--font-display);
+      color: var(--clr-accent);
+    }
+
+    .modal-footer {
+      border-top: 1px solid rgba(201, 168, 76, 0.15);
+    }
+
+    .btn-close {
+      filter: invert(1) grayscale(1) brightness(2);
+    }
+
+    .back-home-link {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      color: var(--clr-muted);
+      font-size: 0.85rem;
+      text-decoration: none;
+      transition: color var(--transition);
+    }
+    .back-home-link:hover {
+      color: var(--clr-accent);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="login-container">
+    <h1 class="brand-title">Pontos Turísticos</h1>
+    <p class="brand-subtitle">Acesso de Viajantes</p>
+    
+    <form id="login-form">
+      <div class="mb-3">
+        <label for="username" class="form-label">Usuário</label>
+        <input type="text" id="username" class="form-control" placeholder="Seu login" required autocomplete="username">
+      </div>
+      
+      <div class="mb-4">
+        <label for="password" class="form-label">Senha</label>
+        <input type="password" id="password" class="form-control" placeholder="Sua senha" required autocomplete="current-password">
+      </div>
+      
+      <div class="d-grid gap-2">
+        <button type="submit" class="btn btn-accent">Entrar</button>
+        <button type="button" class="btn btn-outline-accent" data-bs-toggle="modal" data-bs-target="#loginModal">Criar Conta</button>
+      </div>
+    </form>
+    
+    <a href="index.html" class="back-home-link"><i class="bi bi-arrow-left"></i> Voltar ao site principal</a>
+  </div>
+
+  <!-- Cadastro Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Novo Explorador</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="register-form">
+            <div class="mb-3">
+              <label for="txt_login" class="form-label">Nome de Usuário (Login)</label>
+              <input type="text" id="txt_login" class="form-control" placeholder="Ex: joao123" required>
+            </div>
+            
+            <div class="mb-3">
+              <label for="txt_nome" class="form-label">Nome Completo</label>
+              <input type="text" id="txt_nome" class="form-control" placeholder="Ex: João Silva" required>
+            </div>
+            
+            <div class="mb-3">
+              <label for="txt_email" class="form-label">E-mail</label>
+              <input type="email" id="txt_email" class="form-control" placeholder="Ex: joao@email.com" required>
+            </div>
+            
+            <div class="mb-3">
+              <label for="txt_senha" class="form-label">Senha</label>
+              <input type="password" id="txt_senha" class="form-control" placeholder="Mínimo 3 caracteres" required>
+            </div>
+            
+            <div class="mb-3">
+              <label for="txt_senha2" class="form-label">Confirmar Senha</label>
+              <input type="password" id="txt_senha2" class="form-control" placeholder="Repita a senha" required>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-accent" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" id="btn_salvar" class="btn btn-accent">Salvar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./login.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  
+  <script>
+    // Processa a submissão do formulário de login
+    function processaFormLogin(event) {
+      event.preventDefault();
+      
+      var username = document.getElementById('username').value.trim();
+      var password = document.getElementById('password').value.trim();
+
+      var loginSucesso = loginUser(username, password);
+      
+      if (loginSucesso) {
+        // Redireciona para a página principal
+        window.location.href = 'index.html';
+      } else {
+        alert('Usuário ou senha incorretos.');
+      }
+    }
+
+    // Salva o cadastro de um novo usuário
+    function salvaLogin(event) {
+      event.preventDefault();
+
+      let login  = document.getElementById('txt_login').value.trim();
+      let nome   = document.getElementById('txt_nome').value.trim();
+      let email  = document.getElementById('txt_email').value.trim();
+      let senha  = document.getElementById('txt_senha').value.trim();
+      let senha2 = document.getElementById('txt_senha2').value.trim();
+      
+      if (!login || !nome || !email || !senha) {
+        alert('Por favor, preencha todos os campos.');
+        return;
+      }
+
+      if (senha !== senha2) {
+        alert('As senhas informadas não conferem.');
+        return;
+      }
+
+      // Adiciona o usuário na API via script login.js
+      addUser(nome, login, senha, email, function(sucesso) {
+        if (sucesso) {
+          alert('Usuário cadastrado com sucesso! Prossiga com o login.');
+          
+          // Limpa o formulário
+          document.getElementById('register-form').reset();
+          
+          // Oculta o modal usando o Bootstrap 5 nativo
+          let modalElement = document.getElementById('loginModal');
+          let modalInstance = bootstrap.Modal.getInstance(modalElement) || new bootstrap.Modal(modalElement);
+          modalInstance.hide();
+        }
+      });
+    }
+
+    // Associa eventos
+    document.getElementById('login-form').addEventListener('submit', processaFormLogin);
+    document.getElementById('btn_salvar').addEventListener('click', salvaLogin);
+  </script>
+</body>
+</html>

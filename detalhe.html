@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Detalhe do Destino</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+
+    <div id="page-detail" class="d-flex flex-column min-vh-100">
+
+      <section id="detail-hero">
+        <img id="detail-img" src="" alt="">
+        <div id="detail-overlay">
+          <button id="btn-back" onclick="window.location.href='index.html'">&#8592; Voltar</button>
+          <div id="auth-detail-wrap" style="position: absolute; top: 24px; right: 24px; z-index: 10;"></div>
+          <h1 id="detail-title"></h1>
+          <p id="detail-universe"></p>
+        </div>
+      </section>
+
+      <section id="detail-body" class="container py-5 flex-grow-1">
+        <div class="row gy-4">
+
+          <div class="col-12 col-md-8">
+            <h2 class="detail-section-title">Sobre o lugar</h2>
+            <p id="detail-description"></p>
+
+            <h2 class="detail-section-title mt-4">Atrações</h2>
+            <ul id="detail-attractions" class="list-unstyled"></ul>
+
+            <h2 class="detail-section-title mt-4">Como chegar</h2>
+            <p id="detail-how"></p>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <div id="detail-card-info">
+              <h3>Informações</h3>
+              <div id="detail-facts"></div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <footer class="text-center py-3">
+        <p class="mb-0">Nenhum direito reservado &mdash; Todos os mundos pertencem aos seus criadores</p>
+      </footer>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="login.js"></script>
+    <script src="detalhe.js"></script>
+  </body>
+</html>

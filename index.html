@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pontos Turísticos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+
+    <div id="page-home" class="d-flex flex-column min-vh-100">
+
+      <header id="hero">
+        <div id="hero-track">
+        </div>
+        <div id="hero-text">
+          <p id="hero-subtitle">Descubra mundos além da imaginação</p>
+          <h1 id="hero-title">Pontos Turísticos</h1>
+        </div>
+        <div id="hero-dots"></div>
+      </header>
+
+      <nav id="site-nav" class="navbar navbar-expand-md px-3 py-2">
+        <button class="navbar-toggler me-2" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navMenu"
+                aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <div id="nav-links" class="navbar-nav me-auto">
+          </div>
+        </div>
+        <div id="nav-inputs" class="d-flex flex-wrap gap-2 ms-auto">
+          <div class="input-wrap">
+            <span class="input-icon">&#128269;</span>
+            <input type="text" id="search-input" placeholder="Pesquisar destino...">
+          </div>
+          <div class="input-wrap">
+            <span class="input-icon">&#9776;</span>
+            <select id="filter-select">
+              <option value="">Todos os mundos</option>
+            </select>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container-fluid px-0 flex-grow-1">
+        <div class="row g-0 h-100">
+
+          <main class="col-12 col-md-10 px-0">
+            <section id="cards-grid" class="row g-0">
+            </section>
+          </main>
+
+          <aside class="col-md-2 d-none d-md-flex flex-column align-items-center pt-4">
+            <div id="aside-menu" class="w-100 px-3">
+              <p class="aside-title">Categorias</p>
+              <ul id="aside-list" class="list-unstyled"></ul>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+
+      <section id="analytics-section" class="container my-5 py-4">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8 text-center">
+            <h2 class="aside-title text-center mb-3" style="font-size: 1.4rem;">Estatísticas dos Destinos</h2>
+            
+            <div class="p-4" style="background-color: var(--clr-panel); border: 1px solid rgba(201, 168, 76, 0.15); border-radius: var(--radius); height: 340px; position: relative;">
+              <canvas id="categories-chart"></canvas>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+      <section id="student-info" class="container my-5 py-4">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8 text-center">
+            <h2 class="student-title">Informações sobre o Aluno</h2>
+            <div class="student-card p-4 mt-3">
+              <p><strong>Nome:</strong> Rafael Gomes Antunes De Oliveira</p>
+              <p><strong>Curso:</strong> Engenharia de Software</p>
+              <p><strong>Turma:</strong> Puc Lourdes Noite</p>
+              <div class="student-socials mt-3">
+                <span class="d-block mb-2"><strong>Redes Sociais:</strong></span>
+                <a href="https://www.linkedin.com/in/rafael-gomes-8bba733a3/" target="_blank" class="mx-2">LinkedIn</a>
+                <a href="https://github.com/rafaelgomes77oliveira-ux" target="_blank" class="mx-2">GitHub</a>
+                <a href="https://www.instagram.com/fiden_anuncios/" target="_blank" class="mx-2">Instagram</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="text-center py-3 mt-auto">
+        <p class="mb-0">Nenhum direito reservado &mdash; Todos os mundos pertencem aos seus criadores</p>
+      </footer>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="login.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
