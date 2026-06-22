@@ -1,15 +1,15 @@
 const HERO_SLIDES = [
-  { img: "IMG/hyrule.png",        label: "Reino de Hyrule" },
-  { img: "IMG/EggHead.png",       label: "Egghead" },
-  { img: "IMG/springfield.jfif",  label: "Springfield" },
-  { img: "IMG/FendaDoBikini.png", label: "Fenda do Biquíni" },
+  { img: "assets/img/hyrule.png",        label: "Reino de Hyrule" },
+  { img: "assets/img/EggHead.png",       label: "Egghead" },
+  { img: "assets/img/springfield.jfif",  label: "Springfield" },
+  { img: "assets/img/FendaDoBikini.png", label: "Fenda do Biquíni" },
 ];
 
 
 const NAV_LINKS = [
   { label: "Início",   href: "index.html", id: "btn-home" },
   { label: "Favoritos", href: "favoritos.html", id: "btn-favs" },
-  { label: "Cadastrar", href: "cadastro.html" }
+  { label: "Cadastrar", href: "cadastro_itens.html" }
 ];
 
 let heroIndex = 0;
@@ -44,10 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
       
     });
 });
-
-function getFavorites() {
-  return JSON.parse(localStorage.getItem('favoritos_turismo')) || [];
-}
 
 function buildChart() {
   const ctx = document.getElementById('categories-chart');
@@ -105,16 +101,6 @@ function buildChart() {
       }
     }
   });
-}
-
-function toggleFavorite(id) {
-  let favorites = getFavorites();
-  if (favorites.includes(id)) {
-    favorites = favorites.filter(favId => favId !== id);
-  } else {
-    favorites.push(id);
-  }
-  localStorage.setItem('favoritos_turismo', JSON.stringify(favorites));
 }
 
 function buildHero() {
@@ -283,7 +269,7 @@ function buildGrid(list = PLACES) {
     });
 
     const irParaDetalhe = () => {
-      window.location.href = `detalhe.html?id=${place.id}`;
+      window.location.href = `detalhes.html?id=${place.id}`;
     };
     card.addEventListener("click", irParaDetalhe);
     card.addEventListener("keydown", e => { if (e.key === "Enter") irParaDetalhe(); });

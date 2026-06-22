@@ -1,0 +1,20 @@
+{
+  "name": "pontos-turisticos",
+  "version": "1.0.0",
+  "description": "Catálogo de pontos turísticos fictícios, com cadastro, detalhes, favoritos e login, consumindo uma API REST via JSON Server.",
+  "main": "db/db.json",
+  "scripts": {
+    "start": "json-server --watch db/db.json --port 3000"
+  },
+  "keywords": [
+    "json-server",
+    "bootstrap",
+    "chartjs",
+    "javascript"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.17.4"
+  }
+}

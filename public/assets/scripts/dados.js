@@ -6,7 +6,7 @@ const PLACES = [
     name: "Reino de Hyrule",
     universe: "The Legend of Zelda",
     category: "Fantasia",
-    img: "IMG/hyrule.png",
+    img: "assets/img/hyrule.png",
     description:
       "Hyrule é um reino mágico situado em um vasto planalto cercado por montanhas imponentes e florestas ancestrais. Lar da Princesa Zelda e palco eterno da batalha entre a luz e as trevas, o reino guarda a lendária Tríforce — artefato que concede qualquer desejo ao seu portador.",
     attractions: [
@@ -31,7 +31,7 @@ const PLACES = [
     name: "Casa na Árvore",
     universe: "Adventure Time",
     category: "Fantasia",
-    img: "IMG/casaNaArvore.jpg",
+    img: "assets/img/casaNaArvore.jpg",
     description:
       "A incrível Casa na Árvore de Finn e Jake fica no coração da Terra de Ooo. Construída dentro de uma gigantesca árvore viva, a casa tem cômodos que parecem impossíveis por fora mas enormes por dentro — especialmente graças às habilidades de transformação de Jake.",
     attractions: [
@@ -55,7 +55,7 @@ const PLACES = [
     name: "Egghead — Ilha do Ovo",
     universe: "One Piece",
     category: "Ficção Científica",
-    img: "IMG/EggHead.png",
+    img: "assets/img/EggHead.png",
     description:
       "Egghead é a ilha-laboratório do Dr. Vegapunk, o maior cientista do mundo de One Piece. Localizada no Novo Mundo, a ilha flutua sobre uma base esférica coberta de gelo e abriga tecnologia 500 anos à frente do seu tempo.",
     attractions: [
@@ -79,7 +79,7 @@ const PLACES = [
     name: "Fenda do Biquíni",
     universe: "Bob Esponja",
     category: "Aventura Aquática",
-    img: "IMG/FendaDoBikini.png",
+    img: "assets/img/FendaDoBikini.png",
     description:
       "A Fenda do Biquíni é a cidade subaquática mais famosa do Oceano Pacífico. Localizada sob uma rocha em forma de âncora no fundo do mar, abriga personagens icônicos e uma vida comunitária vibrante.",
     attractions: [
@@ -103,7 +103,7 @@ const PLACES = [
     name: "Springfield",
     universe: "Os Simpsons",
     category: "Comédia",
-    img: "IMG/springfield.jfif",
+    img: "assets/img/springfield.jfif",
     description:
       "Springfield é uma cidade americana de tamanho médio, localizada em um estado propositalmente indefinido. Lar dos Simpsons, a cidade conta com uma usina nuclear questionável, um bar sempre aberto e uma comunidade que mistura o ordinário com o completamente absurdo.",
     attractions: [
@@ -127,7 +127,7 @@ const PLACES = [
     name: "Torre dos titans",
     universe: "One Piece",
     category: "Ficção Científica",
-    img: "IMG/TitansTower.jfif",
+    img: "assets/img/TitansTower.jfif",
     description:
       "A icônica torre em formato de T, do universo da liga da justiça",
     attractions: [

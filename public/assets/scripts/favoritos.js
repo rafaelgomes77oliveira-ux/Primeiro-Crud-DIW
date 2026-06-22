@@ -42,23 +42,6 @@ function toggleFavorite(id) {
   localStorage.setItem(chaveDoUsuario, JSON.stringify(favorites));
 }
 
-function toggleFavorite(id) {
-  let usuarioSufixo = "visitante";
-  if (typeof usuarioCorrente !== "undefined" && usuarioCorrente && usuarioCorrente.login) {
-    usuarioSufixo = usuarioCorrente.login;
-  }
-  
-  const chaveDoUsuario = `favoritos_turismo_${usuarioSufixo}`;
-  let favorites = getFavorites();
-
-  if (favorites.includes(id)) {
-    favorites = favorites.filter(favId => favId !== id);
-  } else {
-    favorites.push(id);
-  }
-  localStorage.setItem(chaveDoUsuario, JSON.stringify(favorites));
-}
-
 function renderizarFavoritos() {
   const grid = document.getElementById("cards-grid");
   grid.innerHTML = "";
@@ -110,7 +93,7 @@ function renderizarFavoritos() {
     });
 
     card.addEventListener("click", () => {
-      window.location.href = `detalhe.html?id=${place.id}`;
+      window.location.href = `detalhes.html?id=${place.id}`;
     });
 
     col.appendChild(card);

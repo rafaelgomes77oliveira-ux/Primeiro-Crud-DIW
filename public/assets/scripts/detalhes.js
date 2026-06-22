@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(place => {
       document.title = place.name + " — Pontos Turísticos";
 
-      document.getElementById("detail-img").src = place.img || "IMG/hyrule.png"; 
+      document.getElementById("detail-img").src = place.img || "assets/img/hyrule.png"; 
       document.getElementById("detail-img").alt = place.name;
       document.getElementById("detail-title").textContent = place.name;
       document.getElementById("detail-universe").textContent = "✦ " + place.universe + " ✦";
